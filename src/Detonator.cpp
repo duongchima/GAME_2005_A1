@@ -4,7 +4,7 @@
 #include <cmath>
 #include <iomanip>
 
-const double PI = 3.141592654, g = -10;
+const double PI = 3.141592654, g = -9.8;
 
 Detonator::Detonator()
 {

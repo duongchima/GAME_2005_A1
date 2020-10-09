@@ -10,7 +10,6 @@ PlayScene::PlayScene()
 {
 	PlayScene::start();
 }
-
 PlayScene::~PlayScene()
 = default;
 
@@ -140,18 +139,22 @@ void PlayScene::start()
 
 void PlayScene::Launch()
 {
-	newVelocity.x = Vo * cos(angle * deg2rad); // Calculate what the new x velocity will be given the inputs.
-	newVelocity.y = Vo * -sin(angle * deg2rad); // Same for y velocity.
+	newVelocity.x = Vo * cos(angle * deg2rad) * 4.4; // Calculate what the new x velocity will be given the inputs.
+	newVelocity.y = Vo * -sin(angle * deg2rad) * 4.4; // Same for y velocity.
 
 	newAcceleration = glm::vec2(0.0f, gravity); // Set some acceleration (just gravity).
+
 
 	// Calculate the new position using a small timestep and the current position of the detonator.
 	newPosition = m_pDetonator->getTransform()->position + (glm::vec2(newVelocity.x, newVelocity.y) * initialTime)
 		+ ((0.5f * newAcceleration) * (accTime * accTime));
 
+	std::cout << "Position x: " << newPosition.x << std::endl;
+
 	if (launching)
 	{
 		accTime += initialTime;
+
 		m_pDetonator->getTransform()->position = newPosition;
 	}
 	if (m_pDetonator->getTransform()->position.y >= 500.0f)
@@ -170,8 +173,8 @@ void PlayScene::Reset()
 {
 	m_pDetonator->getTransform()->position = glm::vec2(50, 500);
 	launching = false;
-	angle = 0.0f;
-	Vo = 0.0f;
+	angle = 15.88f;
+	Vo = 95.0f;
 	y_max = 0.0f;
 	initialTime = 0.016667f;
 	accTime = 0.016667f;
@@ -201,7 +204,6 @@ void PlayScene::GUI_Function()
 	else if (ImGui::Button("Reset"))
 	{
 		Reset();
-
 	}
 
 	ImGui::Separator();
@@ -209,12 +211,12 @@ void PlayScene::GUI_Function()
 	ImGui::SliderFloat("Range", &m_pPlaneSprite->getTransform()->position.x, 180.0f, 750.0f);
 	ImGui::SliderFloat("Angle", &angle, 0.0f, 90.0f);
 	ImGui::SliderFloat("Gravity", &gravity, 0.0f, 10.0f);
-	ImGui::SliderFloat("Velocity", &Vo, 0.0f, 500.0f);
+	ImGui::SliderFloat("Velocity", &Vo, 0.0f, 125.0f);
 
 
 	ImGui::Separator();
-	std::cout << "Velocity: " << newVelocity.x << std::endl;
-	std::cout << "Acceleration: "<< newAcceleration.y << std::endl;
+	//std::cout << "Velocity: " << newVelocity.x << std::endl;
+	//std::cout << "Acceleration: "<< newAcceleration.y << std::endl;
 
 	ImGui::End();
 
