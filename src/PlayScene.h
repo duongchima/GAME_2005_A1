@@ -23,6 +23,7 @@ public:
 	virtual void start() override;
 	void Launch();
 	void StartLaunch();
+	void Reset();
 
 
 private:
@@ -60,7 +61,8 @@ private:
 	// UI Items
 	Button* m_pBackButton;
 	Button* m_pNextButton;
-	Label* m_pInstructionsLabel;
+	Label* m_pInstructionsLabel;	
+	Label* m_pStepLabel;
 };
 
 #endif /* defined (__PLAY_SCENE__) */

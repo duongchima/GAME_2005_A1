@@ -1,2 +1,24 @@
-﻿  PlayScene.cpp
-  Template.vcxproj -> C:\Users\chloe\Documents\SDL_Engine\bin\Debug\Template.exe
+﻿  Plane.cpp
+D:\School\Github\GAME_2005_A1\src\Plane.cpp(30,55): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME_2005_A1\src\Plane.cpp(30,52): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Player.cpp
+D:\School\Github\GAME_2005_A1\src\Player.cpp(30,49): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME_2005_A1\src\Player.cpp(30,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  Template.vcxproj -> D:\School\Github\GAME_2005_A1\bin\Debug\Template.exe
