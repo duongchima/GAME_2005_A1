@@ -23,6 +23,7 @@ public:
 	virtual void start() override;
 	void Launch();
 	void StartLaunch();
+	void Reset();
 
 
 private:
@@ -50,8 +51,8 @@ private:
 	const float deg2rad = 0.0174532925f;
 	const float rad2deg = 57.295779513f;
 
-	float angle = 0.0f;
-	float Vo = 0.0f;
+	float angle = 15.88f;
+	float Vo = 95.0f;
 	float y_max = 0.0f;
 	float initialTime = 0.016667f;
 	float accTime = 0.016667f;
@@ -60,7 +61,8 @@ private:
 	// UI Items
 	Button* m_pBackButton;
 	Button* m_pNextButton;
-	Label* m_pInstructionsLabel;
+	Label* m_pInstructionsLabel;	
+	Label* m_pStepLabel;
 };
 
 #endif /* defined (__PLAY_SCENE__) */

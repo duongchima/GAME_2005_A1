@@ -1,2 +1,12 @@
 ﻿  PlayScene.cpp
-  Template.vcxproj -> C:\Users\chloe\Documents\SDL_Engine\bin\Debug\Template.exe
+D:\School\Github\GAME_2005_A1\src\PlayScene.cpp(142,44): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\School\Github\GAME_2005_A1\src\PlayScene.cpp(143,45): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Template.vcxproj -> D:\School\Github\GAME_2005_A1\bin\Debug\Template.exe

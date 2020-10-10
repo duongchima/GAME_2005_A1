@@ -11,7 +11,7 @@ Player::Player()
 	// set frame height
 	setHeight(58);
 
-	getTransform()->position = glm::vec2(50.0f, 400.0f);
+	getTransform()->position = glm::vec2(50.0f, 450.0f);
 	getRigidBody()->velocity = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->acceleration = glm::vec2(0.0f, 0.0f);
 	getRigidBody()->isColliding = false;
